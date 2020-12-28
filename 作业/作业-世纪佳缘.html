@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input {
+            color: #999;
+            border: 1px solid #999;
+        }
+    </style>
+</head>
+
+<body>
+    <input type="text" value="邮箱/ID/手机号">
+    <script>
+        var ipt = document.querySelector('input')
+        ipt.onfocus = function() {
+            if (this.value === '邮箱/ID/手机号') {
+                this.value = '';
+
+            }
+            this.style.color = '#333';
+            this.style.borderColor = 'pink'
+            this.style.outline = 'none'
+        }
+        ipt.onblur = function() {
+            if (this.value === '') {
+                this.value = '邮箱/ID/手机号';
+            }
+            this.style.color = '#999';
+            this.style.borderColor = '#999'
+        }
+    </script>
+</body>
+
+</html>
